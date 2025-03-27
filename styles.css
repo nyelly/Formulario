@@ -61,4 +61,8 @@
     padding: 15px 30px; /* Aumenta o espaço interno (vertical e horizontal) */
     font-size: 15px; /* Aumenta o tamanho da fonte */
     color:white;
+  }
+  .botao:active {
+    box-shadow: 0 0 15px 5px rgba(40, 167, 69, 0.7); /* Sombra verde forte ao clicar */
+    transform: scale(0.95); /* Efeito de pressão ao clicar */
 }

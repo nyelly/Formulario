@@ -2,10 +2,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <title>Frontend Mentor | Contact form</title>
   <link rel="stylesheet" href="./styles.css">
-
+  <script src="./script.js"></script>
 </head>
 <body>
   <div class="container">
@@ -14,27 +13,27 @@
     <div class="row">
       <div>
         <p>First Name</p>
-        <input type="text">
+        <input type="text" class="input-field">
       </div>
       <div>
         <p>Last Name</p>
-        <input type="text">
+        <input type="text" class="input-field">
       </div>
     </div>
     
     <p>Email Address</p>
     <div class="rowemail">
-      <input type="text">
+      <input type="text" class="input-field">
     </div>
 
     <p>Query Type</p>
-    <div class="row">
-      <input type="text" value="General Enquiry">
-      <input type="text" value="Support Request">
+    <div class="row" >
+      <input type="button" id="btn1" value="General Enquiry">
+      <input type="button" id="btn2" value="Support Request">
     </div>
     
     <p>Message</p>
-    <input type="text" class="caixa2">
+    <input type="text" class="caixa2 input-field">
 
     <div class="checkbox-container">
       <input type="checkbox">
