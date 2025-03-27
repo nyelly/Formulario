@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: hsl(148, 38%, 91%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .container {
+    width: 600px;
+    height: 500px;
+    background-color: white;
+    border-radius: 2%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .row {
+    display: flex;
+    gap: 10px;
+    
+  }
+  .row input {
+    flex: 1;
+    width: 274px;
+    height: 35px;
+    border: 1px solid;
+    border-radius: 5px;
+  }
+
+  .rowemail input{
+    width: 560px;
+    height: 35px;
+    border: 1px solid;
+    border-radius: 5px;
+  }
+
+  .caixa2{
+    font-size: 90PX;
+    border: 1px solid;
+    border-radius: 5px;
+  }
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+.botao{
+    background: rgb(18, 119, 65);
+    margin-top: 100px;
+    margin-top: -2px;
+    border-radius: 5px;
+    border-width: 1000% ;
+    border: 1px solid #000; /* Borda fina de 1px */
+    padding: 15px 30px; /* Aumenta o espaço interno (vertical e horizontal) */
+    font-size: 15px; /* Aumenta o tamanho da fonte */
+    color:white;
+}

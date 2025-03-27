@@ -1,52 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Contact form</title>
+  <link rel="stylesheet" href="./styles.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <div class="container">
+    <h2>Contact Us</h2>
+    
+    <div class="row">
+      <div>
+        <p>First Name</p>
+        <input type="text">
+      </div>
+      <div>
+        <p>Last Name</p>
+        <input type="text">
+      </div>
+    </div>
+    
+    <p>Email Address</p>
+    <div class="rowemail">
+      <input type="text">
+    </div>
 
-  Contact Us
+    <p>Query Type</p>
+    <div class="row">
+      <input type="text" value="General Enquiry">
+      <input type="text" value="Support Request">
+    </div>
+    
+    <p>Message</p>
+    <input type="text" class="caixa2">
 
-  First Name
-  This field is required
+    <div class="checkbox-container">
+      <input type="checkbox">
+      <label>I consent to being contacted by the team</label>
+    </div>
 
-  Last Name
-  This field is required
-
-  Email Address
-  Please enter a valid email address
-  This field is required
-
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
-
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    <button class="botao">Submit</button>
   </div>
 </body>
 </html>
