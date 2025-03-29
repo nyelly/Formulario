@@ -4,11 +4,15 @@ window.onload = function() {
     const erros = document.querySelectorAll('.error-message');
     const consent = document.getElementById('consent');
 
-    botao.addEventListener('click', function() {
+    campos.forEach(input => {
+        input.addEventListener('input', validarForm);
+    });
+    consent.addEventListener('change', validarForm);
 
-        erros.forEach(erro => erro.innerText = "");
-
+    function validarForm() {
         let temErro = false;
+
+        erros.forEach(e => e.innerText = "");
 
         if (campos[0].value.trim() === "") {
             erros[0].innerText = "O campo 'First Name' está vazio.";
@@ -41,9 +45,11 @@ window.onload = function() {
             temErro = true;
         }
 
-        if (!temErro) {
-            alert("Formulário enviado com sucesso!");
-        }
+        botao.disabled = temErro;
+    }
+
+    botao.addEventListener('click', function() {
+        alert("Formulário enviado com sucesso!");
     });
 }
 

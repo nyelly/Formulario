@@ -55,9 +55,13 @@
   color: red;
   font-size: 12px;
   margin: 2px 0 0 2px;
-  height: 14px; /* Isso evita que o layout fique pulando */
+  height: 14px;
 }
 
+.botao:disabled{
+  background-color: gray;
+  cursor: not-allowed;
+}
 
 .botao{
     background: rgb(18, 119, 65);
