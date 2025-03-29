@@ -1,54 +1,53 @@
 window.onload = function() {
     const botao = document.querySelector('.botao');
+    const campos = document.querySelectorAll('.input-field');
+    const erros = document.querySelectorAll('.error-message');
+    const consent = document.getElementById('consent');
 
     botao.addEventListener('click', function() {
-        const firstName = document.querySelectorAll('.input-field')[0].value.trim();
-        const lastName = document.querySelectorAll('.input-field')[1].value.trim();
-        const email = document.querySelectorAll('.input-field')[2].value.trim();
-        const message = document.querySelectorAll('.input-field')[3].value.trim();
-        const consent = document.querySelector('.checkbox-container input').checked;
 
-        if (firstName === "") {
-            alert("O campo 'First Name' está vazio.");
-            return;
+        erros.forEach(erro => erro.innerText = "");
+
+        let temErro = false;
+
+        if (campos[0].value.trim() === "") {
+            erros[0].innerText = "O campo 'First Name' está vazio.";
+            temErro = true;
         }
 
-        if (lastName === "") {
-            alert("O campo 'Last Name' está vazio.");
-            return;
+        if (campos[1].value.trim() === "") {
+            erros[1].innerText = "O campo 'Last Name' está vazio.";
+            temErro = true;
         }
 
-        if (email === "") {
-            alert("O campo 'Email' está vazio.");
-            return;
+        if (campos[2].value.trim() === "") {
+            erros[2].innerText = "O campo 'Email' está vazio.";
+            temErro = true;
+        } else if (!campos[2].value.includes("@")) {
+            erros[2].innerText = "O e-mail precisa conter o símbolo '@'.";
+            temErro = true;
+        } else if (!validarEmail(campos[2].value.trim())) {
+            erros[2].innerText = "O e-mail inserido não é válido.";
+            temErro = true;
         }
 
-        if (!email.includes("@")) {
-            alert("O e-mail precisa conter o símbolo '@'");
-            return;
+        if (campos[3].value.trim() === "") {
+            erros[3].innerText = "O campo 'Message' está vazio.";
+            temErro = true;
         }
 
-        if (!validarEmail(email)) {
-            alert("O e-mail inserido não é válido.");
-            return;
-        }      
-
-        if (message === "") {
-            alert("O campo 'Message' está vazio.");
-            return;
+        if (!consent.checked) {
+            erros[4].innerText = "Você precisa marcar o consentimento.";
+            temErro = true;
         }
 
-        if (!consent) {
-            alert("Você precisa marcar o consentimento.");
-            return;
+        if (!temErro) {
+            alert("Formulário enviado com sucesso!");
         }
-
-        alert("Entrar");
     });
 }
 
-
 function validarEmail(email) {
-    const regex = /\S+@\S+/; 
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
 }

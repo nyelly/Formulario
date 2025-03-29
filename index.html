@@ -11,33 +11,38 @@
     <h2>Contact Us</h2>
     
     <div class="row">
-      <div>
-        <p>First Name</p>
-        <input type="text" class="input-field">
-      </div>
-      <div>
-        <p>Last Name</p>
-        <input type="text" class="input-field">
-      </div>
+        <div>
+            <p>First Name</p>
+            <input type="text" class="input-field" id="firstName">
+            <p class="error-message"></p>
+        </div>
+        <div>
+            <p>Last Name</p>
+            <input type="text" class="input-field" id="lastName">
+            <p class="error-message"></p>
+        </div>
     </div>
     
     <p>Email Address</p>
     <div class="rowemail">
-      <input type="text" class="input-field">
+        <input type="text" class="input-field" id="email">
+        <p class="error-message"></p>
     </div>
 
     <p>Query Type</p>
-    <div class="row" >
-      <input type="button" id="btn1" value="General Enquiry">
-      <input type="button" id="btn2" value="Support Request">
+    <div class="row">
+        <input type="button" id="btn1" value="General Enquiry">
+        <input type="button" id="btn2" value="Support Request">
     </div>
     
     <p>Message</p>
-    <input type="text" class="caixa2 input-field">
+    <input type="text" class="caixa2 input-field" id="message">
+    <p class="error-message"></p>
 
     <div class="checkbox-container">
-      <input type="checkbox">
-      <label>I consent to being contacted by the team</label>
+        <input type="checkbox" id="consent">
+        <label>I consent to being contacted by the team</label>
+        <p class="error-message"></p>
     </div>
 
     <button class="botao">Submit</button>
